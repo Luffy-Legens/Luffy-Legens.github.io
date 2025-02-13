@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            isolation: isolate;
+            transition: background-image 1s ease-in-out;
+        }
+
+        html::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: -1;
+        }
+
+        h1 {
+            color: black;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 86.4px;
+            margin-bottom: 40px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        p.date {
+            margin-top: 0;
+            margin-bottom: 60px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+       .timeline {
+            position: relative;
+            margin-left: 20%;
+            max-width: 910px;
+            padding-left: 30px;
+        }
+
+       .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: lightgray;
+        }
+
+       .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+       .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+       .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 6px;
+            height: 6px;
+            background-color: lightblue;
+            border-radius: 50%;
+            margin-top: 8px;
+        }
+
+       .timeline-item p {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+       .timeline-item time {
+            display: inline-block;
+            vertical-align: middle;
+            color: white;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+       .timeline-item img {
+            /* 让图片宽度尽量不缩小，最大宽度为容器宽度 */
+            max-width: 100%; 
+            display: block;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+       .timeline-item img.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+       /* 给最后一个时间轴项添加较大的底部外边距 */
+       .timeline-item:last-child {
+            margin-bottom: 400px; 
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <title>A Fortunate Encounter</title>
+</head>
+
+<body>
+    <h1>A Fortunate Encounter</h1>
+    <p class="date">February 13, 2025</p>
+    <div class="timeline">
+        <div class="timeline-item">
+            <time>2018/2/1</time>
+            <p>On a serendipitous winter day, in the labyrinthine corridors of the campus, their eyes met like stars aligning in the cosmic expanse. A gentle jolt, a flutter of hearts, and destiny whispered its first sweet promise.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2018/5/10</time>
+            <p>In the quiet sanctuary of the classroom, where knowledge danced on the air, he became her guiding light. With words as gentle as a summer breeze, he untangled the knots of her confusion, and a seed of admiration bloomed in her heart.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2018/9/20</time>
+            <p>Under the golden canopy of autumn, at the school sports meet, he was a blazing comet on the track. She stood on the sidelines, her cheers a symphony of support, and in that moment, their souls soared together.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2018/11/5</time>
+            <p>In the hushed embrace of the library, among the whispering shelves of books, they found themselves side by side. Their shared silence was a poem, and the air between them was charged with the electricity of unspoken feelings.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2019/1/15</time>
+            <p>With a courage born of a budding affection, he reached out and asked for her contact. And so, their digital conversations became a tapestry of shared dreams, laughter, and the soft cadence of growing closeness.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2019/3/22</time>
+            <p>On a lazy weekend, by the tranquil lake in the park, they strolled hand in hand. The world around them faded into a blur as they lost themselves in the magic of each other's presence, their hearts beating in sync.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2019/6/8</time>
+            <p>On a warm summer night, beneath the velvet blanket of the sky, they lay side by side, gazing at the stars. His voice, like a gentle lullaby, wove tales of constellations, and she fell deeper under his spell.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2019/8/12</time>
+            <p>When illness cast a shadow over her world, he was her knight in shining armor. With a tender touch and a heart full of love, he brought her medicine and warmth, and in that moment, she knew she was cherished.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2019/10/18</time>
+            <p>In the dimly lit movie theater, surrounded by the soft murmur of the film, his hand found hers. A spark ignited, and in that simple gesture, they crossed the threshold into a world of shared intimacy.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2019/12/25</time>
+            <p>On her birthday, he transformed a simple room into a wonderland of love. The twinkling lights, the sweet aroma of flowers, and his heartfelt words were a symphony of romance, and she was lost in a sea of bliss.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2020/3/3</time>
+            <p>On the peak of a mountain, where the wind carried the echoes of the earth, they stood hand in hand. With the world at their feet, they shouted their love into the void, and the mountains echoed their passion.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2020/5/21</time>
+            <p>A storm of words had passed between them, but love prevailed. With a humble apology and a heart full of remorse, he mended the cracks in their relationship, and their bond grew stronger than ever.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2020/11/11</time>
+            <p>In the cold embrace of winter, he wrapped a hand - knitted scarf around her neck. The warmth of the wool was nothing compared to the warmth of his love, and she felt safe in his arms.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2021/2/14</time>
+            <p>At a friend's party, amidst the laughter and the music, he looked into her eyes and bared his soul. With a voice trembling with emotion, he confessed his love, and she said yes, sealing their fate.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2021/4/16</time>
+            <p>As lovers, they embarked on a journey to distant lands. Each new landscape was a chapter in their love story, and with every step, they created memories that would last a lifetime.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2021/6/20</time>
+            <p>On Valentine's Day, he presented her with a bouquet of red roses and a diamond ring. The flowers were a symbol of his passion, and the ring was a promise of forever. She looked into his eyes and knew she was home.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2021/8/28</time>
+            <p>When the weight of the world bore down on her at work, he was her rock. With a shoulder to cry on and words of encouragement, he helped her rise above the storm, and their love became a beacon of hope.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2021/10/3</time>
+            <p>Together, they welcomed a furry little companion into their lives. The puppy, named "Love", was a symbol of their shared joy and the beginning of a new family, a family built on love and laughter.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2022/1/5</time>
+            <p>He introduced her to his family, and in their warm smiles and kind words, she found a new home. The love of his family embraced her, and she knew that their love was not just between two people but a part of a greater whole.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2022/3/18</time>
+            <p>She took him to meet her best friends, and their approval was a seal of validation. In their teasing and laughter, she saw a future filled with love and support, and she squeezed his hand, grateful for this moment.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2022/5/25</time>
+            <p>Side by side, they volunteered to help those in need. In the act of giving, they found a deeper connection to each other and to the world around them. Their love became a force for good, spreading kindness wherever they went.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2023/7/1</time>
+            <p>In a secret garden, bathed in the golden glow of the setting sun, he got down on one knee. With a ring in his hand and love in his eyes, he proposed, and she said yes, her heart overflowing with happiness.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2023/9/9</time>
+            <p>The two families came together, their hearts filled with joy and anticipation. In the shared excitement of planning the wedding, they forged new bonds, and the future looked bright for the young couple.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2023/11/15</time>
+            <p>Hand in hand, they explored the world of wedding dresses and suits. Each fitting was a step closer to their big day, and with every choice, they grew more excited for the life they were about to build together.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2024/1/20</time>
+            <p>The wedding preparations were not without their challenges, but they faced them together. With patience, understanding, and a lot of love, they overcame every obstacle, and their love story became even more beautiful.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2024/5/1</time>
+            <p>Surrounded by the laughter and tears of their loved ones, they exchanged vows. In that moment, their love became a promise, a commitment to a lifetime of happiness, and the world seemed to stand still.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2024/7/12</time>
+            <p>As newlyweds, they transformed a simple house into a home. With each piece of furniture, each decoration, they wove a tapestry of love and warmth, and their home became a sanctuary of their love.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2025/2/14</time>
+            <p>Years later, hand in hand, they walked along the beach at sunset. The waves whispered the stories of their love, and as they looked into each other's eyes, they knew that their love was a timeless symphony, a melody that would play on forever.</p>
+        </div>
+        <div class="timeline-item">
+            <time>2025/2/15</time>
+            <p>As a symbol of their eternal love, this beautiful moment is captured in the following picture.</p>
+            <img class="bottom-image" src="C:/Users/a_180/Pictures/Camera%20Roll/拣爱.png" alt="Bottom Image">
+        </div>
+        <div class="timeline-item">
+            <time>2025</time>
+            <p>What a fortunate encounter!</p>
+        </div>
+        <div class="timeline-item">
+            <time>20XX</time>
+            <p>...																																																		.</p>
+        </div>
+    </div>
+    <script>
+        const backgroundImages = [
+            'D:/Download/桌面壁纸/hyouka%20(2).jpg',
+            'D:/Download/桌面壁纸/sousou-no-Frieren%20(2).jpg',
+            'D:/Download/桌面壁纸/sousou-no-Frieren%20(4).jpg',
+            'D:/Download/桌面壁纸/sousou-no-Frieren.jpg',
+            'D:/Download/桌面壁纸/spice-and-wolf%20(3).jpg',
+            'D:/Download/桌面壁纸/spice-and-wolf%20(4).jpg'
+        ];
+        let currentImageIndex = 0;
+
+        function preloadImages() {
+            backgroundImages.forEach(imageUrl => {
+                const img = new Image();
+                img.src = imageUrl;
+            });
+        }
+
+        function changeBackgroundImage() {
+            const htmlElement = document.documentElement;
+            htmlElement.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+            currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        }
+
+        preloadImages();
+        changeBackgroundImage();
+        setInterval(changeBackgroundImage, 5000);
+
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        let lastScrollTop = 0;
+
+        function checkVisibility() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const isScrollingDown = scrollTop > lastScrollTop;
+            lastScrollTop = scrollTop;
+
+            timelineItems.forEach((item, index) => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    if (isScrollingDown) {
+                        const previousItems = Array.from(timelineItems).slice(0, index);
+                        const allPreviousVisible = previousItems.every(prevItem => prevItem.classList.contains('visible'));
+                        if (allPreviousVisible) {
+                            item.classList.add('visible');
+                            const img = item.querySelector('img');
+                            if (img) {
+                                img.classList.add('visible');
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+</body>
+
+</html>
